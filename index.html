@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Magic the Gathering Card Tool</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,27 +23,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+  $(document).ready(function() {
+    $( "#cardName" ).change(function() {
+    
+      $.ajax({
+        url: 'searchCardName.php', 
+        data: {searchCardName: $( "#cardName" ).val()},
+        success: function(data){
+          $('#cardResult').html(data); 
+        
+        }
+      });
+    });
+    
+  });
+  </script>
 
 <div class="container">
   <fieldset class="form-group">
     <label for="enterCardName">Enter card name: </label>
     <input type="search" class="form-control" id="cardName" placeholder="Enter card name!">
-    <div class="btn-group">
-      <button type="button" class="btn btn-primary">Action</button>
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Creature</a>
-        <a class="dropdown-item" href="#">Artifact</a>
-        <a class="dropdown-item" href="#">Planeswalker</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else</a>
-      </div>
-    </div>
+    <div id="cardResult">Search Result</div>
   </fieldset>
 </div>
-
 
   </body>
 </html>
