@@ -18,19 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $( "#cardName" ).change(function() {
-          $.ajax({
-            url: 'searchCardName.php',
-            data: {searchCardName: $( "#cardName" ).val()},
-            success: function(data){
-              $('#cardResult').html(data);
-            }
-          });
-        });
-      });
-    </script>
+
     <div class="container" id="ParentDiv">
       <div class="jumbotron">
         <h1>MTG Card Tool</h1>
@@ -42,19 +30,13 @@
       </ul>
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="">Card Search</a></li>
+          <li role="presentation"><a href="index.html">Card Search</a></li>
           <li role="presentation"><a href="expansionSearch.html">Expansion Search</a></li>
-          <li role="presentation"><a href="bannedList.php">Banned List</a></li>
+          <li role="presentation" class="active"><a href="">Banned List</a></li>
         </ul>
       </div>
       <div class="col-md-8">
-        <fieldset class="form-group">
-          <label for="enterCardName">Enter card name: </label>
-          <input type="search" class="form-control" id="cardName" placeholder="Enter card name!">
-          <div id="cardResult">Search result</div>
-        </fieldset>
       </div>
     </div>
-
   </body>
 </html>
