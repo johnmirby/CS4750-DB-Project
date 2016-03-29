@@ -38,6 +38,8 @@
                         $stmt->close();
                 }
 
+        }
+
         $db->close();
 
 
