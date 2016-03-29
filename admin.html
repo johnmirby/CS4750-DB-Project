@@ -23,39 +23,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-  $(document).ready(function() {
-    $( "#cardName" ).change(function() {
-      $.ajax({
-        url: 'searchCardName.php',
-        data: {searchCardName: $( "#cardName" ).val()},
-        success: function(data){
-          $('#cardResult').html(data);
-        }
-      });
-    });
-  });
-    </script>
-<div class="container">
-  <ul class="nav nav-tabs nav-justified">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="admin.html">Admin</a></li>
-  </ul>
-  <div class="col-md-4">
-    <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" class="active"><a href="#">Card Search</a></li>
-      <li role="presentation"><a href="#">Expansion Search</a></li>
-      <li role="presentation"><a href="#">Banned List</a></li>
-    </ul>
-  </div>
-  <div class="col-md-8">
-    <fieldset class="form-group">
-      <label for="enterCardName">Enter card name: </label>
-      <input type="search" class="form-control" id="cardName" placeholder="Enter card name!">
-      <div id="cardResult">Search Result</div>
-    </fieldset>
-  </div>
-</div>
-
+    <div class="container">
+      <ul class="nav nav-tabs nav-justified">
+        <li role="presentation"><a href="index.html">Home</a></li>
+        <li role="presentation" class="active"><a href="#">Admin</a></li>
+      </ul>
+      <fieldset class="form-group">
+        <label for="enterFileName">Upload a file: </label>
+        <input type="file" name="submittedfile">
+      </fieldset>
+    </div>
   </body>
+
+
 </html>
