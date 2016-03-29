@@ -30,13 +30,13 @@
         url: 'searchCardName.php',
         data: {searchCardName: $( "#cardName" ).val()},
         success: function(data){
-          $('#cardResult').html(data);
+          $('#ParentDiv').find("cardResult").html(data);
         }
       });
     });
   });
     </script>
-<div class="container">
+<div class="container" id="ParentDiv">
   <ul class="nav nav-tabs nav-justified">
     <li role="presentation" class="active"><a href="#">Home</a></li>
     <li role="presentation"><a href="admin.html">Admin</a></li>

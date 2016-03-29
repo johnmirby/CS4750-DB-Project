@@ -3,17 +3,16 @@
         $db = DbUtil::loginConnection();
 
         $stmt = $db->stmt_init();
-
         if($stmt->prepare("select Card_Name from Card where Card_Name like ?") or die(mysqli_error($db))) {
                 $searchString = '%' . $_GET['searchCardName'] . '%';
                 $stmt->bind_param(s, $searchString);
                 $stmt->execute();
                 $stmt->bind_result($Card_Name);
-                echo "<table border=1><th>Card Name</th>\n";
+                echo "<table class=\"table table-hover\"><thead><th>Card Name</th></thead><tbody>\n";
                 while($stmt->fetch()) {
                         echo "<tr><td>$Card_Name</td></tr>";
                 }
-                echo "</table>";
+                echo "</tbody></table>";
 
                 $stmt->close();
         }
