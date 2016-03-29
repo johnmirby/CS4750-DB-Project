@@ -9,11 +9,12 @@
                 $stmt->execute();
                 $stmt->bind_result($Card_Name);
                 echo "<table class=\"table table-hover\"><thead><th>Card Name</th></thead><tbody>\n";
+                //echo "<table border="1"> <th>Card Name</th>\n";
                 while($stmt->fetch()) {
                         echo "<tr><td>$Card_Name</td></tr>";
                 }
                 echo "</tbody></table>";
-
+                //echo "</table>";
                 $stmt->close();
         }
 
