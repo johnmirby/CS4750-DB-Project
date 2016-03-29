@@ -36,6 +36,26 @@
         </ul>
       </div>
       <div class="col-md-8">
+        <div class="table">
+        <?php
+        require "dbutil.php";
+        $db = DbUtil::loginConnection();
+
+        $stmt = $db->stmt_init();
+
+        if($stmt->prepare("select Card_Name, Format_Name from Card natural join Banned_In natural join Format") or die(mysqli_error($db))) {
+                        $stmt->execute();
+                        $stmt->bind_result($Card_Name, $Rules_Text);
+                        echo "<table border=1><th>Card Name</th><th>Rules Text</th>\n";
+                        while($stmt->fetch()) {
+                                echo "<tr><td>$Card_Name</td><td>$Rules_Text</td></tr>";
+                        }
+                        echo "</table>";
+
+                        $stmt->close();
+                }
+        ?>
+        </div>
       </div>
     </div>
   </body>
