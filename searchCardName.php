@@ -37,7 +37,6 @@
 
                         $stmt->close();
                 }
-        }
 
         $db->close();
 

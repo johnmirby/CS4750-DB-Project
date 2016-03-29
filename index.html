@@ -10,13 +10,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   </head>
   <body>
 
@@ -24,7 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
+  <script>
   $(document).ready(function() {
     $( '#adv-search' ).submit(function() {
       return false;
@@ -74,7 +69,27 @@
   });
   </script>
 
-<div class="input-group" id="adv-search">
+
+
+<div class="container" id="ParentDiv">
+  <div class="jumbotron">
+  <h1>MTG Card Tool</h1>
+  <p>For competitive use!</p>
+</div>
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="admin.html">Admin</a></li>
+</ul>
+<div class="col-md-4">
+  <ul class="nav nav-pills nav-stacked">
+    <li role="presentation" class="active"><a href="">Card Search</a></li>
+    <li role="presentation"><a href="expansionSearch.html">Expansion Search</a></li>
+    <li role="presentation"><a href="bannedList.php">Banned List</a></li>
+  </ul>
+</div>
+<div class="col-md-8">
+  <fieldset class="form-group">
+    <div class="input-group" id="adv-search">
     <input type="text" class="form-control" id="cardName" placeholder="Enter card name">
     <div class="input-group-btn">
         <div class="btn-group" role="group">
@@ -105,11 +120,15 @@
             <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
         </div>
     </div>
-</div>
+  </div>
 </br>
-<div class="container">
-  <div id="cardResult">Search Results</div>
+  <div class="container">
+      <div id="cardResult">Search Results</div>
+    </div>
+    </fieldset>
+  </div>
 </div>
+
 
 </body>
 
