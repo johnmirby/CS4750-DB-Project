@@ -46,11 +46,11 @@
         if($stmt->prepare("select Card_Name, Format_Name from Card natural join Banned_In natural join Format") or die(mysqli_error($db))) {
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text);
-                        echo "<table border=1><th>Card Name</th><th>Rules Text</th>\n";
+                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td></tr>";
                         }
-                        echo "</table>";
+                        echo "</tbody></table>";
 
                         $stmt->close();
                 }
