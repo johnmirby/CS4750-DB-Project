@@ -10,6 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/pages.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   </head>
@@ -19,57 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    $( '#adv-search' ).submit(function() {
-      return false;
-    });
-
-    $( "#cardName" ).change(function() {
-
-      $.ajax({
-        url: 'searchCardName.php',
-        data: { searchCardName: $( "#cardName" ).val(),
-              searchCardRulesText: $( "#cardRulesText" ).val(),
-              typeIndex: $( '#cardType' ).val() },
-        success: function(data){
-          $('#cardResult').html(data);
-
-        }
-      });
-    });
-
-    $( "#cardRulesText" ).change(function() {
-
-      $.ajax({
-        url: 'searchCardName.php',
-        data: { searchCardName: $( "#cardName" ).val(),
-              searchCardRulesText: $( "#cardRulesText" ).val(),
-              typeIndex: $( '#cardType' ).val() },
-        success: function(data){
-          $('#cardResult').html(data);
-
-        }
-      });
-    });
-
-    $( "#cardType" ).change(function() {
-
-      $.ajax({
-        url: 'searchCardName.php',
-        data: { searchCardName: $( "#cardName" ).val(),
-              searchCardRulesText: $( "#cardRulesText" ).val(),
-              typeIndex: $( '#cardType' ).val() },
-        success: function(data){
-          $('#cardResult').html(data);
-
-        }
-      });
-    });
-  });
-  </script>
-
-
+    <script src="scripts.js"></script>
 
 <div class="container" id="ParentDiv">
   <div class="jumbotron">
@@ -82,9 +33,9 @@
 </ul>
 <div class="col-md-4">
   <ul class="nav nav-pills nav-stacked">
-    <li role="presentation" class="active"><a href="">Card Search</a></li>
+    <li role="presentation" class="active" ><a href="">Card Search</a></li>
     <li role="presentation"><a href="expansionSearch.html">Expansion Search</a></li>
-    <li role="presentation"><a href="bannedList.php">Banned List</a></li>
+    <li role="presentation" id="banListBtn"><a href="bannedList.php">Banned List</a></li>
   </ul>
 </div>
 <div class="col-md-8">
@@ -123,42 +74,10 @@
   <div class="table">
       <div id="cardResult">Search Results</div>
     </div>
-  </div>
+</div>
 </div>
 
 
 </body>
 
-<style>
-body {
-    padding-top: 50px;
-}
-.dropdown.dropdown-lg .dropdown-menu {
-    margin-top: -1px;
-    padding: 6px 20px;
-}
-.input-group-btn .btn-group {
-    display: flex !important;
-}
-.btn-group .btn {
-    border-radius: 0;
-    margin-left: -1px;
-}
-.btn-group .btn:last-child {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-.btn-group .form-horizontal .btn[type="submit"] {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.form-horizontal .form-group {
-    margin-left: 0;
-    margin-right: 0;
-}
-.form-group .form-control:last-child {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-</style>
 </html>
