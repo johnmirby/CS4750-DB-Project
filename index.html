@@ -26,43 +26,43 @@
     });
 
     $( "#cardName" ).change(function() {
-    
+
       $.ajax({
-        url: 'searchCardName.php', 
-        data: { searchCardName: $( "#cardName" ).val(), 
-              searchCardRulesText: $( "#cardRulesText" ).val(), 
+        url: 'searchCardName.php',
+        data: { searchCardName: $( "#cardName" ).val(),
+              searchCardRulesText: $( "#cardRulesText" ).val(),
               typeIndex: $( '#cardType' ).val() },
         success: function(data){
-          $('#cardResult').html(data); 
-        
+          $('#cardResult').html(data);
+
         }
       });
     });
 
     $( "#cardRulesText" ).change(function() {
-    
+
       $.ajax({
-        url: 'searchCardName.php', 
-        data: { searchCardName: $( "#cardName" ).val(), 
-              searchCardRulesText: $( "#cardRulesText" ).val(), 
+        url: 'searchCardName.php',
+        data: { searchCardName: $( "#cardName" ).val(),
+              searchCardRulesText: $( "#cardRulesText" ).val(),
               typeIndex: $( '#cardType' ).val() },
         success: function(data){
-          $('#cardResult').html(data); 
-        
+          $('#cardResult').html(data);
+
         }
       });
     });
-    
+
     $( "#cardType" ).change(function() {
-    
+
       $.ajax({
-        url: 'searchCardName.php', 
-        data: { searchCardName: $( "#cardName" ).val(), 
-              searchCardRulesText: $( "#cardRulesText" ).val(), 
+        url: 'searchCardName.php',
+        data: { searchCardName: $( "#cardName" ).val(),
+              searchCardRulesText: $( "#cardRulesText" ).val(),
               typeIndex: $( '#cardType' ).val() },
         success: function(data){
-          $('#cardResult').html(data); 
-        
+          $('#cardResult').html(data);
+
         }
       });
     });
