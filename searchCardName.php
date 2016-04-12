@@ -13,7 +13,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td></tr>";
                         }
@@ -29,7 +29,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost, $Power, $Subtype, $Toughness, $Legendary);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Power</th><th>Toughness</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Power</th><th>Toughness</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td><td>$Power</td><td>$Toughness</td><td>$Subtype</td><td>$Legendary</td></tr>";
                         }
@@ -46,7 +46,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost, $Legendary, $Subtype);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td><td>$Subtype</td><td>$Legendary</td></tr>";
                         }
@@ -63,7 +63,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td></tr>";
                         }
@@ -80,7 +80,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td></tr>";
                         }
@@ -97,7 +97,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost, $Legendary, $Subtype);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td><td>$Subtype</td><td>$Legendary</td></tr>";
                         }
@@ -114,7 +114,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Mana_Cost, $Loyalty, $Planeswalker_Name);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Planeswalker</th><th>Loyalty</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Mana Cost</th><th>Planeswalker</th><th>Loyalty</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Mana_Cost</td><td>$Planeswalker_Name</td><td>$Loyalty</td></tr>";
                         }
@@ -131,7 +131,7 @@
                         $stmt->bind_param('ss', $searchCardNameString, $searchCardRulesTextString);
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text, $Legendary, $Subtype);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th><th>Subtype</th><th>Legendary</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Rules_Text</td><td>$Subtype</td><td>$Legendary</td></tr>";
                         }

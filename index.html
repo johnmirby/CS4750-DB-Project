@@ -20,12 +20,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.tabletojson.js"></script>
     <script src="scripts.js"></script>
 
 <div class="container" id="ParentDiv">
   <div class="jumbotron">
   <h1>MTG Card Tool</h1>
-  <p>For competitive use!</p>
 </div>
 <ul class="nav nav-tabs nav-justified">
   <li role="presentation" class="active"><a href="#">Home</a></li>
@@ -72,8 +72,10 @@
     </div>
   </div>
   <div class="table">
-      <div id="cardResult">Search Results</div>
-    </div>
+      <div id="cardResult"></div>
+  </div>
+  <div id="query-json"></div>
+  <button id="json-button" class="btn btn-primary">Export to JSON</button>
 </div>
 </div>
 

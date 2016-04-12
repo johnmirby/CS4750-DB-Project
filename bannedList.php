@@ -23,7 +23,6 @@
     <div class="container" id="ParentDiv">
       <div class="jumbotron">
         <h1>MTG Card Tool</h1>
-        <p>For competitive use!</p>
       </div>
       <ul class="nav nav-tabs nav-justified">
         <li role="presentation" class="active"><a href="#">Home</a></li>

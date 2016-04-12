@@ -109,4 +109,9 @@ $(document).ready(function() {
     });
   });
 
+  $("#json-button").click(function() {
+    var result = $("#query-result").tableToJSON();
+    $("#query-json").html(JSON.stringify(result))
+  });
+  
 });

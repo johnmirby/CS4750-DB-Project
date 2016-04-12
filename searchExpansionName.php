@@ -12,7 +12,7 @@
                         $stmt->bind_param('s', $searchExpansionNameString);
                         $stmt->execute();
                         $stmt->bind_result($Expansion_Code, $Expansion_Name, $Release_Date, $Block, $Border);
-                        echo "<table class=\"table table-striped\"><thead><th>Expansion Name</th><th>Expansion Code</th><th>Release Date</th><th>Block</th><th>Card Border</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Expansion Name</th><th>Expansion Code</th><th>Release Date</th><th>Block</th><th>Card Border</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Expansion_Name</td><td>$Expansion_Code</td><td>$Release_Date</td><td>$Block</td><td>$Border</td></tr>";
                         }
@@ -28,7 +28,7 @@
                         $stmt->bind_param('ss', $searchExpansionNameString, $searchCardNameString);
                         $stmt->execute();
                         $stmt->bind_result($Expansion_Code, $Card_Name, $Expansion_Name, $Release_Date, $Block, $Border);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Expansion Name</th><th>Expansion Code</th><th>Release Date</th><th>Block</th><th>Card Border</th></thead><tbody>\n";
+                        echo "<table id=\"query-result\" class=\"table table-striped\"><thead><th>Card Name</th><th>Expansion Name</th><th>Expansion Code</th><th>Release Date</th><th>Block</th><th>Card Border</th></thead><tbody>\n";
                         while($stmt->fetch()) {
                                 echo "<tr><td>$Card_Name</td><td>$Expansion_Name</td><td>$Expansion_Code</td><td>$Release_Date</td><td>$Block</td><td>$Border</td></tr>";
                         }
