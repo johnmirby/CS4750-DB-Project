@@ -113,5 +113,16 @@ $(document).ready(function() {
     var result = $("#query-result").tableToJSON();
     $("#query-json").html(JSON.stringify(result))
   });
-  
+
+  $("#login-form").submit(function() {
+    $.ajax({
+      url: 'login.php',
+      data: { username: $( "#username" ).val(),
+            password: $( "#pwd" ).val(),
+            },
+      success: function(data) {
+        alert(data);
+      }
+    });
+  });
 });
