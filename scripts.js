@@ -111,7 +111,10 @@ $(document).ready(function() {
 
   $("#json-button").click(function() {
     var result = $("#query-result").tableToJSON();
-    $("#query-json").html(JSON.stringify(result))
+    exportData = 'data:text/json;charset=utf-8,';
+    exportData += JSON.stringify(result);
+    encodedUri = encodeURI(exportData);
+    newWindow = window.open(encodedUri);
   });
 
   $("#login-form").submit(function() {
