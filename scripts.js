@@ -117,14 +117,15 @@ $(document).ready(function() {
     newWindow = window.open(encodedUri);
   });
 
-  $("#login-form").submit(function() {
+  $("#login-form").submit(function(e) {
+      e.preventDefault;
     $.ajax({
       url: 'login.php',
       data: { username: $( "#username" ).val(),
             password: $( "#pwd" ).val(),
             },
       success: function(data) {
-        alert(data);
+          window.location.href="sessionSkeleton.php" //change the URL HERE
       }
     });
   });
