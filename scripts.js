@@ -125,7 +125,7 @@ $(document).ready(function() {
             password: $( "#pwd" ).val(),
             },
       success: function(data) {
-          window.location.href="sessionSkeleton.php" //change the URL HERE
+          window.location.href="admin-home.php" //change the URL HERE
       }
     });
   });
