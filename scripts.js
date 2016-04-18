@@ -129,4 +129,20 @@ $(document).ready(function() {
       }
     });
   });
+
+  $("#admin-op-select").change(function() {
+    if ($("#admin-op-select").val() == "0") {
+      $("#admin-card-select").hide();
+    }
+    if ($("#admin-op-select").val() == "1") {
+      $("#admin-card-select").hide();
+    }
+    if ($("#admin-op-select").val() == "2") {
+      $("#admin-card-select").show();
+    }
+    if ($("#admin-op-select").val() == "3") {
+      $("#admin-card-select").show();
+    }
+  });
+
 });

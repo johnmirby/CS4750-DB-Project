@@ -66,3 +66,12 @@ table tr:nth-child(even) td{
     color: #555;
     background-color: #EFECCA;   
 }
+#admin-card-select {
+    display: none;
+}
+#cardNameLabel {
+    display: none;
+}
+#expansionCardNameText {
+    display: none;
+}
