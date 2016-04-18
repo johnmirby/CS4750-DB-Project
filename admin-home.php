@@ -48,7 +48,12 @@
 								<option value="2">Update Card</option>
 								<option value="3">Delete Card</option>
 							</select>
-							<label for="usr">Select Card:</label>
+							<label for="usr" id="admin-insert-card-name-label">Card Name:</label>
+							<input type="text" class="form-control" id="admin-card-name">
+							<label for="usr" id="admin-insert-card-rules-text-label">Card Rules Text:</label>
+							<input type="text" class="form-control" id="admin-card-rules-text">
+							<button id="admin-insert-card-button" class="btn btn-primary">Insert Card</button>
+							<label for="usr" id="admin-card-select-label">Select Card:</label>
 							<select class="form-control" id="admin-card-select">
 								<option selected></option>
 								<?php
@@ -65,6 +70,12 @@
 		            			}
 								?>
 							</select>
+							<label for="usr" id="admin-update-card-name-label">Update Card Name:</label>
+							<input type="text" class="form-control" id="admin-update-card-name">
+							<label for="usr" id="admin-update-card-rules-text-label">Update Card Rules Text:</label>
+							<input type="text" class="form-control" id="admin-update-card-rules-text">
+							<button id="admin-update-card-button" class="btn btn-primary">Update Card</button>
+							<button id="admin-delete-card-button" class="btn btn-primary">Delete Card</button>
 						</div>	
 		    		</div> <!-- /.col-xs-12 -->
 		    	</div> <!-- /.row -->

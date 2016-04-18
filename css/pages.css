@@ -75,3 +75,39 @@ table tr:nth-child(even) td{
 #expansionCardNameText {
     display: none;
 }
+#admin-card-name {
+    display: none;
+}
+#admin-card-rules-text {
+    display: none;
+}
+#admin-insert-card-button {
+    display: none;
+}
+#admin-update-card-name {
+    display: none;
+}
+#admin-update-card-rules-text {
+    display: none;
+}
+#admin-update-card-button {
+    display: none;
+}
+#admin-delete-card-button {
+    display: none;
+}
+#admin-insert-card-name-label {
+    display: none;
+}
+#admin-insert-card-rules-text-label {
+    display: none;
+}
+#admin-card-select-label {
+    display: none;
+}
+#admin-update-card-name-label {
+    display: none;
+}
+#admin-update-card-rules-text-label {
+    display: none;
+}
