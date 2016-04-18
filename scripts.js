@@ -136,13 +136,11 @@ $(document).ready(function() {
       $("#admin-card-rules-text").hide();
       $("#admin-insert-card-button").hide();
       $("#admin-card-select").hide();
-      $("#admin-update-card-name").hide();
       $("#admin-update-card-rules-text").hide();
       $("#admin-update-card-button").hide();
       $("#admin-delete-card-button").hide();
       $("#admin-insert-card-name-label").hide();
       $("#admin-insert-card-rules-text-label").hide();
-      $("#admin-update-card-name-label").hide();
       $("#admin-update-card-rules-text-label").hide();
       $("#admin-card-select-label").hide();
     }
@@ -151,13 +149,11 @@ $(document).ready(function() {
       $("#admin-card-rules-text").show();
       $("#admin-insert-card-button").show();
       $("#admin-card-select").hide();
-      $("#admin-update-card-name").hide();
       $("#admin-update-card-rules-text").hide();
       $("#admin-update-card-button").hide();
       $("#admin-delete-card-button").hide();
       $("#admin-insert-card-name-label").show();
       $("#admin-insert-card-rules-text-label").show();
-      $("#admin-update-card-name-label").hide();
       $("#admin-update-card-rules-text-label").hide();
       $("#admin-card-select-label").hide();
     }
@@ -166,13 +162,11 @@ $(document).ready(function() {
       $("#admin-card-rules-text").hide();
       $("#admin-insert-card-button").hide();
       $("#admin-card-select").show();
-      $("#admin-update-card-name").show();
       $("#admin-update-card-rules-text").show();
       $("#admin-update-card-button").show();
       $("#admin-delete-card-button").hide();
       $("#admin-insert-card-name-label").hide();
       $("#admin-insert-card-rules-text-label").hide();
-      $("#admin-update-card-name-label").show();
       $("#admin-update-card-rules-text-label").show();
       $("#admin-card-select-label").show();
     }
@@ -181,13 +175,11 @@ $(document).ready(function() {
       $("#admin-card-rules-text").hide();
       $("#admin-insert-card-button").hide();
       $("#admin-card-select").show();
-      $("#admin-update-card-name").hide();
       $("#admin-update-card-rules-text").hide();
       $("#admin-update-card-button").hide();
       $("#admin-delete-card-button").show();
       $("#admin-insert-card-name-label").hide();
       $("#admin-insert-card-rules-text-label").hide();
-      $("#admin-update-card-name-label").hide();
       $("#admin-update-card-rules-text-label").hide();
       $("#admin-card-select-label").show();
     }
@@ -205,8 +197,28 @@ $(document).ready(function() {
     });
   });
 
+  $("#admin-card-select").change(function() {
+    if ($("#admin-op-select").val() == "2") {
+      $.ajax({
+        url: 'adminSelectCard.php',
+        data: { cardName: $("#admin-card-select").val()},
+        success: function(data){
+          $("#admin-update-card-rules-text").val(data);
+        }
+      });
+    }
+  });
+
   $("#admin-update-card-button").click(function(e) {
     e.preventDefault();
+    $.ajax({
+      url: 'adminUpdateCard.php',
+      data: { cardName: $("#admin-card-select").val(),
+            cardRulesText: $("#admin-update-card-rules-text").val()},
+      success: function(data){
+        alert("Successfully updated Card");
+      }
+    });
   });
 
   $("#admin-delete-card-button").click(function(e) {

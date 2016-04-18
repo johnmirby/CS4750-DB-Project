@@ -84,9 +84,6 @@ table tr:nth-child(even) td{
 #admin-insert-card-button {
     display: none;
 }
-#admin-update-card-name {
-    display: none;
-}
 #admin-update-card-rules-text {
     display: none;
 }
@@ -103,9 +100,6 @@ table tr:nth-child(even) td{
     display: none;
 }
 #admin-card-select-label {
-    display: none;
-}
-#admin-update-card-name-label {
     display: none;
 }
 #admin-update-card-rules-text-label {

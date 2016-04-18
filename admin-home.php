@@ -70,8 +70,6 @@
 		            			}
 								?>
 							</select>
-							<label for="usr" id="admin-update-card-name-label">Update Card Name:</label>
-							<input type="text" class="form-control" id="admin-update-card-name">
 							<label for="usr" id="admin-update-card-rules-text-label">Update Card Rules Text:</label>
 							<input type="text" class="form-control" id="admin-update-card-rules-text">
 							<button id="admin-update-card-button" class="btn btn-primary">Update Card</button>
