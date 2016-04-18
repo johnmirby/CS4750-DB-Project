@@ -73,3 +73,42 @@ table tr:nth-child(even) td{
 #search-button {
     margin-left: 5px;
 }
+#admin-card-select {
+    display: none;
+}
+#cardNameLabel {
+    display: none;
+}
+#expansionCardNameText {
+    display: none;
+}
+#admin-card-name {
+    display: none;
+}
+#admin-card-rules-text {
+    display: none;
+}
+#admin-insert-card-button {
+    display: none;
+}
+#admin-update-card-rules-text {
+    display: none;
+}
+#admin-update-card-button {
+    display: none;
+}
+#admin-delete-card-button {
+    display: none;
+}
+#admin-insert-card-name-label {
+    display: none;
+}
+#admin-insert-card-rules-text-label {
+    display: none;
+}
+#admin-card-select-label {
+    display: none;
+}
+#admin-update-card-rules-text-label {
+    display: none;
+}

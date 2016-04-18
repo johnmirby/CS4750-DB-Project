@@ -125,8 +125,111 @@ $(document).ready(function() {
             password: $( "#pwd" ).val(),
             },
       success: function(data) {
-          window.location.href="sessionSkeleton.php" //change the URL HERE
+          window.location.href="admin-home.php" //change the URL HERE
       }
     });
   });
+
+  $("#admin-op-select").change(function() {
+    if ($("#admin-op-select").val() == "0") {
+      $("#admin-card-name").hide();
+      $("#admin-card-rules-text").hide();
+      $("#admin-insert-card-button").hide();
+      $("#admin-card-select").hide();
+      $("#admin-update-card-rules-text").hide();
+      $("#admin-update-card-button").hide();
+      $("#admin-delete-card-button").hide();
+      $("#admin-insert-card-name-label").hide();
+      $("#admin-insert-card-rules-text-label").hide();
+      $("#admin-update-card-rules-text-label").hide();
+      $("#admin-card-select-label").hide();
+    }
+    if ($("#admin-op-select").val() == "1") {
+      $("#admin-card-name").show();
+      $("#admin-card-rules-text").show();
+      $("#admin-insert-card-button").show();
+      $("#admin-card-select").hide();
+      $("#admin-update-card-rules-text").hide();
+      $("#admin-update-card-button").hide();
+      $("#admin-delete-card-button").hide();
+      $("#admin-insert-card-name-label").show();
+      $("#admin-insert-card-rules-text-label").show();
+      $("#admin-update-card-rules-text-label").hide();
+      $("#admin-card-select-label").hide();
+    }
+    if ($("#admin-op-select").val() == "2") {
+      $("#admin-card-name").hide();
+      $("#admin-card-rules-text").hide();
+      $("#admin-insert-card-button").hide();
+      $("#admin-card-select").show();
+      $("#admin-update-card-rules-text").show();
+      $("#admin-update-card-button").show();
+      $("#admin-delete-card-button").hide();
+      $("#admin-insert-card-name-label").hide();
+      $("#admin-insert-card-rules-text-label").hide();
+      $("#admin-update-card-rules-text-label").show();
+      $("#admin-card-select-label").show();
+    }
+    if ($("#admin-op-select").val() == "3") {
+      $("#admin-card-name").hide();
+      $("#admin-card-rules-text").hide();
+      $("#admin-insert-card-button").hide();
+      $("#admin-card-select").show();
+      $("#admin-update-card-rules-text").hide();
+      $("#admin-update-card-button").hide();
+      $("#admin-delete-card-button").show();
+      $("#admin-insert-card-name-label").hide();
+      $("#admin-insert-card-rules-text-label").hide();
+      $("#admin-update-card-rules-text-label").hide();
+      $("#admin-card-select-label").show();
+    }
+  });
+
+  $("#admin-insert-card-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'adminInsertCard.php',
+      data: { cardName: $("#admin-card-name").val(),
+            cardRulesText: $("#admin-card-rules-text").val() },
+      success: function(data){
+        alert("Successfully added Card");
+      }
+    });
+  });
+
+  $("#admin-card-select").change(function() {
+    if ($("#admin-op-select").val() == "2") {
+      $.ajax({
+        url: 'adminSelectCard.php',
+        data: { cardName: $("#admin-card-select").val()},
+        success: function(data){
+          $("#admin-update-card-rules-text").val(data);
+        }
+      });
+    }
+  });
+
+  $("#admin-update-card-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'adminUpdateCard.php',
+      data: { cardName: $("#admin-card-select").val(),
+            cardRulesText: $("#admin-update-card-rules-text").val()},
+      success: function(data){
+        alert("Successfully updated Card");
+      }
+    });
+  });
+
+  $("#admin-delete-card-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'adminDeleteCard.php',
+      data: { cardName: $("#admin-card-select").val()},
+      success: function(data){
+        alert("Successfully deleted Card");
+      }
+    });
+  });
+
 });
