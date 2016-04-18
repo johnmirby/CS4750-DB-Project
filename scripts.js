@@ -193,4 +193,31 @@ $(document).ready(function() {
     }
   });
 
+  $("#admin-insert-card-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'adminInsertCard.php',
+      data: { cardName: $("#admin-card-name").val(),
+            cardRulesText: $("#admin-card-rules-text").val() },
+      success: function(data){
+        alert("Successfully added Card");
+      }
+    });
+  });
+
+  $("#admin-update-card-button").click(function(e) {
+    e.preventDefault();
+  });
+
+  $("#admin-delete-card-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'adminDeleteCard.php',
+      data: { cardName: $("#admin-card-select").val()},
+      success: function(data){
+        alert("Successfully deleted Card");
+      }
+    });
+  });
+
 });
