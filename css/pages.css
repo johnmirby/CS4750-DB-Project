@@ -71,7 +71,7 @@ table tr:nth-child(even) td{
     background-color: #EFECCA;   
 }
 #search-button {
-    margin-left: 5px;
+    margin-left: 1px;
 }
 #admin-card-select {
     display: none;
