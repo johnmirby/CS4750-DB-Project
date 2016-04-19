@@ -232,4 +232,13 @@ $(document).ready(function() {
     });
   });
 
+  $("#admin-logout-button").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'logout.php',
+      success: function(data){
+        window.location.replace("admin-login.php");
+      }
+    });
+  });
 });

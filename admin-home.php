@@ -74,6 +74,7 @@
 							<input type="text" class="form-control" id="admin-update-card-rules-text">
 							<button id="admin-update-card-button" class="btn btn-primary">Update Card</button>
 							<button id="admin-delete-card-button" class="btn btn-primary">Delete Card</button>
+							<button id="admin-logout-button" class="btn btn-primary">Logout</button>
 						</div>	
 		    		</div> <!-- /.col-xs-12 -->
 		    	</div> <!-- /.row -->

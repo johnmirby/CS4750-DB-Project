@@ -46,7 +46,7 @@
 
         $stmt = $db->stmt_init();
 
-        if($stmt->prepare("select Card_Name, Format_Name from Card natural join Banned_In natural join Format") or die(mysqli_error($db))) {
+        if($stmt->prepare("select * from Banned_List") or die(mysqli_error($db))) {
                         $stmt->execute();
                         $stmt->bind_result($Card_Name, $Rules_Text);
                         echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th></thead><tbody>\n";
