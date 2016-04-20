@@ -60,7 +60,11 @@ a {
 }
 .dropdown-menu {
     color: #000;
+    width: 220px;
     background-color: #046380; 
+}
+table tr:first-child td {
+    color: #000;
 }
 table tr:nth-child(odd) td{
     color: #000;
