@@ -48,10 +48,10 @@
 
         if($stmt->prepare("select * from Banned_List") or die(mysqli_error($db))) {
                         $stmt->execute();
-                        $stmt->bind_result($Card_Name, $Rules_Text);
-                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Rules Text</th></thead><tbody>\n";
+                        $stmt->bind_result($Card_Name, $Format_Name);
+                        echo "<table class=\"table table-striped\"><thead><th>Card Name</th><th>Format Name</th></thead><tbody>\n";
                         while($stmt->fetch()) {
-                                echo "<tr><td>$Card_Name</td><td>$Rules_Text</td></tr>";
+                                echo "<tr><td>$Card_Name</td><td>$Format_Name</td></tr>";
                         }
                         echo "</tbody></table>";
 
