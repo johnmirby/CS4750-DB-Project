@@ -39,7 +39,7 @@
         </ul>
       </div>
       <div class="col-md-8">
-        <div class="table">
+        <div class="table" id="query-table">
         <?php
         require "dbutil.php";
         $db = DbUtil::loginConnection();

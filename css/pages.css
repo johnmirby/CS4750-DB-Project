@@ -63,7 +63,7 @@ a {
     width: 220px;
     background-color: #046380; 
 }
-table tr:first-child td {
+#query-table {
     color: #000;
 }
 table tr:nth-child(odd) td{
